@@ -11,8 +11,3 @@ block content
             div(class= "col-sm-2", onclick=`buy(${index})`) DrinkName : &nbsp; #{item.DrinkName}
             div(class= "col-sm-2", onclick=`buy(${index})`) DrinkSize : &nbsp; #{item.DrinkSize}
             div(class= "col-sm-2", onclick=`buy(${index})`) DrinkCost : &nbsp; #{item.DrinkCost}
-
-    script.
-        function buy(itemNum){
-        alert(`You purchased item ${itemNum+1}`)
-        }
