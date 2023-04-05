@@ -8,6 +8,12 @@ block content
     div(class= "container-fluid")
         div(class = "row")  
             each item, index in results
-                div(class= "col-sm-2", onclick=`buy(${index})`) DrinkName : &nbsp; #{item.DrinkName}
-                div(class= "col-sm-2", onclick=`buy(${index})`) DrinkSize : &nbsp; #{item.DrinkSize}
-                div(class= "col-sm-2", onclick=`buy(${index})`) DrinkCost : &nbsp; #{item.DrinkCost}
+                div(class= "col-sm-2", onclick=`drink(${index})`) DrinkName : &nbsp; #{item.DrinkName}
+                div(class= "col-sm-2", onclick=`drink(${index})`) DrinkSize : &nbsp; #{item.DrinkSize}
+                div(class= "col-sm-2", onclick=`drink(${index})`) DrinkCost : &nbsp; #{item.DrinkCost}
+
+
+    script.
+        function drink(itemNum){
+        alert(`You purchased item ${itemNum+1}`)
+        }
